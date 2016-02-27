@@ -11,6 +11,10 @@ router.get('/', function(req, res) {
 	});
 });
 
+router.get('/engagement', function(req, res) {
+	console.log("Engagement");
+	res.render('engagement', {});
+});
 
 
 var clientsController = require('../../api/clients');
