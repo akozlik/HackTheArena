@@ -1,0 +1,35 @@
+{
+  "name": "hackthearena",
+  "version": "0.0.1",
+  "description": "Hack the Arena project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akozlik/HackTheArena.git"
+  },
+  "keywords": [
+    "orlando",
+    "arena",
+    "hack"
+  ],
+  "author": "astudnicky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akozlik/HackTheArena/issues"
+  },
+  "homepage": "https://github.com/akozlik/HackTheArena#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "lodash": "^4.5.1",
+    "passport": "^0.3.2",
+    "pg": "^4.5.1",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.69.0",
+    "sequelize": "^3.19.3"
+  }
+}

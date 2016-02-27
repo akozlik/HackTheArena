@@ -1,0 +1,8 @@
+{
+  "name": "hackthearena",
+  "scripts": {
+  },
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
