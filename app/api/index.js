@@ -1,7 +1,7 @@
 var path = require('path');
 var fs = require('fs');
 
-console.log('** API initialize...');
+console.log('**\tAPI initialize...');
 
 var api = {};
 
@@ -12,7 +12,7 @@ fs.readdirSync(__dirname).filter(function(file){
 	api[file.split('.')[0]] = require(path.join(__dirname, file));
 });
 
-// console.log('** API methods:');
-// console.log(api);
+console.log('**\tAPI methods:');
+console.log(api);
 
 module.exports = api;
