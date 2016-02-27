@@ -6,16 +6,25 @@ var api = require('../../api');
 router.get('/', function(req, res) {
 	console.log(req, res);
 	console.log("Hullo werld");
-	res.render('index', {
+	res.render('pages/index', {
 
 	});
 });
 
-router.get('/engagement', function(req, res) {
-	console.log("Engagement");
-	res.render('engagement', {});
+router.get('/seats', function(req, res) {
+	console.log("Seats");
+	res.render('pages/seats', {});
 });
 
+router.get('/engagement', function(req, res) {
+	console.log("Engagement");
+	res.render('pages/engagement', {});
+});
+
+router.get('/register', function(req, res) {
+	console.log("Registration");
+	res.render('pages/register', {});
+});
 
 var clientsController = require('../../api/clients');
 var eventsController = require('../../api/events');
