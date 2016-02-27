@@ -45,6 +45,7 @@ module.exports = function(sequelize, Sequelize) {
 		classMethods: {
 			associate: function(models) {
 				User.belongsTo(models.Group, {foreignKey: 'group_id', targetKey: 'group_id'});
+				User.hasMany(models.Response, {foreignKey: 'user_id', targetKey: 'user_id'});
 			}
 		},
 		instanceMethods: {
