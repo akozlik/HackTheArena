@@ -22,17 +22,17 @@ module.exports = function(sequelize, Sequelize) {
 			hasComment: {type: Sequelize.STRING, field: "User email"},
 			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_email" }
 		},
+		user_seat: {
+			type: Sequelize.JSON,
+			allowNull: false,
+			hasComment: {type: Sequelize.STRING, field: "User seat"},
+			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_seat" }
+		},
 		user_data: {
 			type: Sequelize.JSON,
 			allowNull: false,
 			hasComment: {type: Sequelize.STRING, field: "User data blob"},
 			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_data" }
-		},
-		user_img: {
-			type: Sequelize.STRING,
-			allowNull: false,
-			hasComment: {type: Sequelize.STRING, field: "User image"},
-			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_img" }
 		}
 	},
 	{
