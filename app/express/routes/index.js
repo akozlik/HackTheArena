@@ -1,7 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var passport = require('passport');
 var api = require('../../api');
+
+console.log(passport);
 
 router.get('/', function(req, res) {
 	res.render('pages/index', {
@@ -22,6 +25,16 @@ router.get('/engagement', function(req, res) {
 		title: "Play to Win!"
 	});
 });
+
+router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+router.get('/auth/facebook/callback',
+	passport.authenticate('facebook', {
+		successRedirect : '/seats',
+		failureRedirect : '/'
+	})
+);
+
 
 router.get('/register', function(req, res) {
 	console.log("Registration");

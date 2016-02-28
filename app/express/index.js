@@ -3,6 +3,8 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session      = require('express-session');
+var passport      = require('passport');
 
 var expressServer = express();
 
@@ -19,9 +21,22 @@ expressServer.use(cookieParser());
 expressServer.use(bodyParser.json());
 expressServer.use(bodyParser.urlencoded({ extended: false }));
 
+//	Passport
+var config = require('../passport/config');
+	config(passport); // pass passport for configuration
+expressServer.use(session({ secret: 'hackthearena' })); //	Session Secret
+expressServer.use(passport.initialize());				//	Initialize Secret
+expressServer.use(passport.session());					//	Create Session
+
 //  Routing...
 var routes = require('./routes/index');
+
+console.log(routes);
+
 expressServer.use('/', routes);
+
+
+
 
 // What to do on 404?
 expressServer.use(function(req, res, next) {
