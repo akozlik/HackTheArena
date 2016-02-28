@@ -31,6 +31,13 @@ router.get('/results', function(req, res) {
 	});
 });
 
+router.get('/connect', function(req, res) {
+	console.log("Connect");
+	res.render('pages/connect', {
+		title: "Connect to Facebook"
+	});
+});
+
 router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
 
  router.get('/auth/facebook/callback',
