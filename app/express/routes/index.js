@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var passport = require('passport');
 var api = require('../../api');
 
 router.get('/', function(req, res) {
@@ -29,6 +30,15 @@ router.get('/results', function(req, res) {
 		title: "Results"
 	});
 });
+
+router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+router.get('/auth/facebook/callback',
+	passport.authenticate('facebook', {
+		successRedirect : '/seats',
+		failureRedirect : '/'
+	})
+);
 
 router.get('/register', function(req, res) {
 	console.log("Registration");

@@ -48,7 +48,7 @@ module.exports = function(sequelize, Sequelize) {
 		},
 		user_data: {
 			type: Sequelize.JSONB,
-			allowNull: false,
+			allowNull: true,
 			hasComment: {type: Sequelize.STRING, field: "Additional user data blob"},
 			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_data" }
 		}
