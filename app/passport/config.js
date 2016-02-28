@@ -64,6 +64,8 @@ module.exports = function(passport) {
 									"name":  profile.name.givenName + ' ' + profile.name.familyName,
 									"email": (profile.emails[0].value || '').toLowerCase()
 								}
+							}).then(function(user){
+								return done(null, user);
 							});
 						}
 
@@ -84,7 +86,7 @@ module.exports = function(passport) {
 								"email": (profile.emails[0].value || '').toLowerCase()
 							}
 						}).then(function(user){
-							done(null, user);
+							return done(null, user);
 						});
 					}
 				});
