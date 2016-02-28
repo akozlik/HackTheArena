@@ -4,8 +4,6 @@ var request = require('request');
 var passport = require('passport');
 var api = require('../../api');
 
-console.log(passport);
-
 router.get('/', function(req, res) {
 	res.render('pages/index', {
 		title: "Log In To Win"
