@@ -1,8 +1,31 @@
 .bg-gray {
     background-color: RGB(197, 203, 208);
     color: #025892;
+    padding-top: 30px;
 }
 
-#row-authentication a {
+.bg-blue {
+    background-color: RGB(96, 176, 201);
+    color: #025892;
+    padding-top: 30px;
+}
+
+.a-dark {
     color: RGB(12, 30, 36);
+    border-bottom: RGB(12, 30, 36);
+}
+
+input{
+    border-width: 3px;
+    border-color: RGB(2, 88, 145);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+input[type=submit].button {
+    background-color: RGB(5, 136, 223);
+    border-width: 3px;
+    border-color: RGB(2, 88, 145);
+    border-radius: 10px;
+    padding: 15px 70px;
 }
