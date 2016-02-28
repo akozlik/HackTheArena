@@ -14,6 +14,8 @@ postgres.sequelize.sync(function(err){						//	Sequelize reads data?
 }).then(function(){
 	console.log('**\tSequelize sync complete');
 
+	prepopulate();
+
 	var http = require('http');
 	var expressApp = require('./express');					//	Express server
 
@@ -28,3 +30,42 @@ postgres.sequelize.sync(function(err){						//	Sequelize reads data?
 
 
 });
+
+
+function prepopulate(){
+
+var uuid = require('node-uuid');
+var Sequelize = require('sequelize');
+var Models = require(__dirname + '/sequelize');
+
+var Client = Models.Client;
+var Event = Models.Event;
+var Group = Models.Group;
+
+var client_id = uuid.v4();
+var event_id = uuid.v4();
+var group_id = "hackthearena";
+
+	Client.create({
+		client_id: client_id,
+		client_name: "Orlando Magic"
+	});
+
+	Event.create({
+		client_id: client_id,
+		event_id: event_id,
+		event_name: "Orlando Magic vs Philadelphia 76ers",
+		event_date: "2014-01-01",
+		event_loc: "Orlando",
+		event_desc: "Orlando Magic game!"
+	});
+
+	Group.create({
+		event_id: event_id,
+		group_id: "hackthearena",
+		group_name: "Hack the Arena",
+		group_sponsor: "Orlando Tech Association",
+		group_img: "http://imgur.com"
+	});
+
+}

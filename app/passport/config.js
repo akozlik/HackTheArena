@@ -70,7 +70,7 @@ module.exports = function(passport) {
 					} else {    //  User does not exist, create one
 
 						User.create({
-							group_id: '',    //  Where do I get group_id??
+							group_id: 'hackthearena',    //  Where do I get group_id??
 							user_id: uuid.v4(),
 							user_email: (profile.emails[0].value || '').toLowerCase(),
 							user_seat: {

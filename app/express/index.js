@@ -31,8 +31,6 @@ expressServer.use(passport.session());					//	Create Session
 //  Routing...
 var routes = require('./routes/index');
 
-console.log(routes);
-
 expressServer.use('/', routes);
 
 
