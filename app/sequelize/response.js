@@ -29,7 +29,7 @@ module.exports = function(sequelize, Sequelize) {
 			fieldWithUnderscores: { type: Sequelize.STRING, field: "response_name" }
 		},
 		response_data: {
-			type: Sequelize.JSON,
+			type: Sequelize.JSONB,
 			allowNull: false,
 			hasComment: {type: Sequelize.STRING, field: "Response name"},
 			fieldWithUnderscores: { type: Sequelize.STRING, field: "response_data" }

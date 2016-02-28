@@ -23,15 +23,33 @@ module.exports = function(sequelize, Sequelize) {
 			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_email" }
 		},
 		user_seat: {
-			type: Sequelize.JSON,
+			type: Sequelize.JSONB,
 			allowNull: false,
 			hasComment: {type: Sequelize.STRING, field: "User seat"},
 			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_seat" }
 		},
+		user_google: {
+			type: Sequelize.JSONB,
+			allowNull: true,
+			hasComment: {type: Sequelize.STRING, field: "User google credentials"},
+			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_google" }
+		},
+		user_facebook: {
+			type: Sequelize.JSONB,
+			allowNull: true,
+			hasComment: {type: Sequelize.STRING, field: "User facebook credentials"},
+			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_facebook" }
+		},
+		user_twitter: {
+			type: Sequelize.JSONB,
+			allowNull: true,
+			hasComment: {type: Sequelize.STRING, field: "User twitter credentials"},
+			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_twitter" }
+		},
 		user_data: {
-			type: Sequelize.JSON,
+			type: Sequelize.JSONB,
 			allowNull: false,
-			hasComment: {type: Sequelize.STRING, field: "User data blob"},
+			hasComment: {type: Sequelize.STRING, field: "Additional user data blob"},
 			fieldWithUnderscores: { type: Sequelize.STRING, field: "user_data" }
 		}
 	},

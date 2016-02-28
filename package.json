@@ -4,7 +4,7 @@
   "description": "Hack the Arena project",
   "main": "app/app.js",
   "scripts": {
-    "start":"node app/app.js",
+    "start": "node app/app.js",
     "test": "echo \"No tests specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/akozlik/HackTheArena/issues"
   },
   "engines": {
-    "npm":"3.7.5",
+    "npm": "3.7.5",
     "node": "5.1.0"
   },
   "homepage": "https://github.com/akozlik/HackTheArena#readme",
@@ -31,8 +31,13 @@
     "cookie-parser": "^1.4.1",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "lodash": "^4.5.1",
+    "node-uuid": "^1.4.7",
     "passport": "^0.3.2",
+    "passport-facebook": "^2.1.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-twitter": "^1.0.4",
     "pg": "^4.5.1",
     "pg-hstore": "^2.3.2",
     "request": "^2.69.0",
