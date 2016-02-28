@@ -81,7 +81,7 @@ module.exports = function(passport) {
 							user_facebook:{
 								"token": token,
 								"name":  profile.name.givenName + ' ' + profile.name.familyName,
-								"email": (profile.emails[0] || '').toLowerCase()
+								"email": (profile.emails[0].value || '').toLowerCase()
 							}
 						});
 					}
