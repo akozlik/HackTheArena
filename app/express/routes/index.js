@@ -34,11 +34,10 @@ router.get('/results', function(req, res) {
 router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
 
 router.get('/auth/facebook/callback',
-	passport.authenticate('facebook', {
-		successRedirect : '/seats',
-		failureRedirect : '/'
-	})
-);
+	passport.authenticate('facebook', {failureRedirect: '/' }),
+	function(req, res) {
+		res.redirect('/seats');
+});
 
 router.get('/register', function(req, res) {
 	console.log("Registration");
