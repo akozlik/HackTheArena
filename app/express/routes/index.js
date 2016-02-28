@@ -23,6 +23,13 @@ router.get('/engagement', function(req, res) {
 	});
 });
 
+router.get('/results', function(req, res) {
+	console.log("Results");
+	res.render('pages/results', {
+		title: "Results"
+	});
+});
+
 router.get('/register', function(req, res) {
 	console.log("Registration");
 	res.render('pages/register', {
