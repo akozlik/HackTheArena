@@ -83,7 +83,7 @@ module.exports = function(passport) {
 								"name":  profile.name.givenName + ' ' + profile.name.familyName,
 								"email": (profile.emails[0].value || '').toLowerCase()
 							}
-						}).succes(function(user){
+						}).then(function(user){
 							done(null, user);
 						});
 					}
