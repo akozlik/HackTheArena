@@ -24,6 +24,13 @@ router.get('/engagement', function(req, res) {
 	});
 });
 
+router.get('/results', function(req, res) {
+	console.log("Results");
+	res.render('pages/results', {
+		title: "Results"
+	});
+});
+
 router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
 
 router.get('/auth/facebook/callback',
@@ -32,7 +39,6 @@ router.get('/auth/facebook/callback',
 		failureRedirect : '/'
 	})
 );
-
 
 router.get('/register', function(req, res) {
 	console.log("Registration");
