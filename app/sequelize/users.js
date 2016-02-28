@@ -54,7 +54,7 @@ module.exports = function(sequelize, Sequelize) {
 		}
 	},
 	{
-		tableName: 'Users',
+		tableName: 'users',
 		deletedAt: 'deleted_at',
 		freezeTableName: true,
 		paranoid: true,

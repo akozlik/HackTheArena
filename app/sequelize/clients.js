@@ -19,7 +19,7 @@ module.exports = function(sequelize, Sequelize) {
 		}
 	},
 	{
-		tableName: 'Clients',
+		tableName: 'clients',
 		deletedAt: 'deleted_at',
 		freezeTableName: true,
 		paranoid: true,

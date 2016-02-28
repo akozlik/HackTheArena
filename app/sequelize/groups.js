@@ -36,7 +36,7 @@ module.exports = function(sequelize, Sequelize) {
 		}
 	},
 	{
-		tableName: 'Groups',
+		tableName: 'groups',
 		deletedAt: 'deleted_at',
 		freezeTableName: true,
 		paranoid: true,
